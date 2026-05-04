@@ -2,43 +2,170 @@
 <html>
 <head>
     <title>Andrew's Clinic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-        body { margin:0; font-family: Arial; }
-        header { background:#0a9396; color:white; padding:15px; text-align:center; }
-        nav { background:#005f73; padding:10px; text-align:center; }
-        nav a { color:white; margin:10px; text-decoration:none; font-weight:bold; }
-        .hero { padding:80px; text-align:center; background:#94d2bd; }
-        .hero h1 { font-size:40px; }
-        .btn { background:#ee9b00; color:white; padding:12px 20px; border:none; cursor:pointer; }
-        footer { background:#001219; color:white; text-align:center; padding:15px; margin-top:20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            position: fixed;
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        header h2 {
+            color: #00f5d4;
+        }
+
+        nav a {
+            margin: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 100px 40px;
+            min-height: 100vh;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #00f5d4;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            margin: 15px;
+            padding: 25px;
+            width: 250px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Andrew's Clinic</h1>
-    <p>Your Health, Our Commitment</p>
+    <h2>Andrew's Clinic</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="hero">
-    <h1>Modern Healthcare You Can Trust</h1>
-    <p>Providing quality treatment with advanced care</p>
-
-    <a href="#">
+<section id="home" class="hero">
+    <div>
+        <h1>Modern Healthcare You Can Trust</h1>
+        <p>Advanced care with a human touch</p>
         <button class="btn">Book Appointment</button>
-    </a>
-</div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p style="margin-top:20px; max-width:800px;">
+        Andrew's Clinic is built on a foundation of trust, care, and modern medical excellence. 
+        We focus on delivering personalized healthcare experiences that truly matter.
+        <br><br>
+        Our team is dedicated to ensuring every patient receives attention, comfort, and the highest level of treatment.
+        <br><br>
+        With advanced technology and a patient-first approach, we aim to redefine healthcare standards.
+        <br><br>
+        Your well-being is not just our job — it is our responsibility.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>General Checkup</h3>
+            <p>Routine health care and diagnostics.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cardiology</h3>
+            <p>Advanced heart treatments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Emergency Care</h3>
+            <p>24/7 immediate support.</p>
+        </div>
+
+        <div class="card">
+            <h3>Lab Services</h3>
+            <p>Fast and accurate testing.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p style="margin-top:20px;">
+        📍 Hyderabad, India <br><br>
+        📞 +91 91234 56789 <br><br>
+        📧 andrewclinic@email.com
+    </p>
+</section>
 
 <footer>
-    <p>© 2026 Andrew's Clinic</p>
+    <p>© 2026 Andrew's Clinic | Designed by Kiran</p>
 </footer>
 
 </body>
